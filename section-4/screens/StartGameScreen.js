@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   inputContainer: {
+    width: "100%",
     alignItems: "center",
     textAlign: "center",
   },
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    width: "80%",
+    width: 200,
     marginHorizontal: "auto",
   },
   btnwrap: {

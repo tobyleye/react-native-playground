@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StyleSheet, View } from "react-native";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
@@ -9,12 +9,13 @@ import GameOverScreen from "./screens/GameOverScreen";
 
 const loadFont = () => {
   return Font.loadAsync({
-    "rolling-candy": require("./assets/fonts/rolling-candy.otf"),
+    "lato-bold": require("./assets/fonts/Lato-Bold.ttf"),
+    "lato-light": require("./assets/fonts/Lato-Thin.ttf"),
   });
 };
 
 export default function Root() {
-  const [userChoice, setUserChoice] = useState();
+  const [userChoice, setUserChoice] = useState(null);
   const [gameRounds, setGameRounds] = useState(0);
   const [fontLoaded, setFontLoaded] = useState(false);
 
@@ -28,7 +29,6 @@ export default function Root() {
       onError={(error) => console.log("Error occured:", error)}
     />;
   }
-
   const restart = () => {
     setUserChoice(null);
     setGameRounds(0);

@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableWithoutFeedback,
 } from "react-native";
+import MainButton from "../components/Button";
 
 const Backdrop = ({ onPress }) => {
   return (
@@ -21,7 +22,8 @@ export default function Confirmation({ chosenNumber, onContinue, onHide }) {
       <Backdrop onPress={onHide} />
       <View style={styles.content}>
         <Text style={styles.text}>Choosen Number: {chosenNumber}</Text>
-        <Button title="Press to continue" color="blue" onPress={onContinue} />
+        {/* <Button title="Press to continue" color="blue" onPress={onContinue} /> */}
+        <MainButton onPress={onContinue}>Press to continue</MainButton>
       </View>
     </View>
   );
@@ -48,6 +50,6 @@ const styles = StyleSheet.create({
   },
   backdrop: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,.2)",
+    backgroundColor: "rgba(0,0,0,.56)",
   },
 });
