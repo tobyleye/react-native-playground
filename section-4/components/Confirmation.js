@@ -7,6 +7,7 @@ import {
   TouchableWithoutFeedback,
 } from "react-native";
 import MainButton from "../components/Button";
+import RoundButton from "../components/RoundButton";
 
 const Backdrop = ({ onPress }) => {
   return (

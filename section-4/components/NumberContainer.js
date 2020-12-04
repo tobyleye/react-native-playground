@@ -2,9 +2,9 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Colors from "../constants/colors";
 
-export default function NumberContainer({ children }) {
+export default function NumberContainer({ children, style }) {
   return (
-    <View style={styles.container}>
+    <View style={StyleSheet.compose(styles.container, style)}>
       <Text style={styles.text}>{children}</Text>
     </View>
   );

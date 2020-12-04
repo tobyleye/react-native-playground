@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, View, Text, Button, Image } from "react-native";
 
-const imageSource =
-  "https://images.unsplash.com/photo-1606822350112-b9e3caea2461?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60";
+// const imageSource =
+//   "https://images.unsplash.com/photo-1606822350112-b9e3caea2461?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60";
 
 export default function GameOverScreen({ gameRounds, userChoice, onRestart }) {
   return (
@@ -12,8 +12,7 @@ export default function GameOverScreen({ gameRounds, userChoice, onRestart }) {
         <Image
           style={styles.image}
           resizeMode="cover"
-          //   source={require("../assets/success.png")}
-          source={{ uri: imageSource }}
+          source={require("../assets/success.png")}
         />
       </View>
       <View style={styles.resultTextContainer}>

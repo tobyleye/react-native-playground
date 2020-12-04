@@ -26,7 +26,6 @@ export default function GameScreen({ userChoice, onGameOver }) {
   }, [currentGuess, userChoice]);
 
   const hint = (direction) => {
-    console.log({ userChoice, currentGuess });
     if (
       (direction === "lower" && userChoice > currentGuess) ||
       (direction === "higher" && userChoice < currentGuess)
@@ -56,8 +55,8 @@ export default function GameScreen({ userChoice, onGameOver }) {
   return (
     <View style={styles.root}>
       <View style={styles.guessContainer}>
-        <Text>Oponent's Guess</Text>
-        <NumberContainer>{currentGuess}</NumberContainer>
+        <Text style={styles.mt10}>Oponent's Guess</Text>
+        <NumberContainer style={styles.mt10}>{currentGuess}</NumberContainer>
       </View>
       <Card style={styles.btnContainer}>
         <Button title="LOWER" onPress={hint.bind(this, "lower")} />
@@ -74,9 +73,14 @@ const styles = StyleSheet.create({
   guessContainer: {
     textAlign: "center",
   },
+  mt10: {
+    marginTop: 10,
+  },
   btnContainer: {
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-between",
     marginHorizontal: "auto",
+    width: 200,
+    marginTop: 10,
   },
 });
